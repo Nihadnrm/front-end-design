@@ -40,11 +40,11 @@ function Middle() {
 
       {/* Product Layout */}
       <div className="row g-3 align-items-stretch">
-        {/* Left column (2 stacked cards, equal height) */}
-        <div className="col-md-3 d-flex flex-column h-100">
+        {/* Left column */}
+        <div className="col-12 col-md-3 d-flex flex-column h-100">
           {leftCards.map((product, i) => (
             <Card key={product.id} className={`shadow-sm flex-fill ${i === 0 ? "mb-3" : ""}`}>
-              <Card.Img variant="top" src={product.img} />
+              <Card.Img variant="top" src={product.img} className="img-fluid" />
               <Card.Body>
                 <Card.Title className="fs-6">{product.title}</Card.Title>
                 <Card.Text>
@@ -57,11 +57,11 @@ function Middle() {
           ))}
         </div>
 
-        {/* Middle big card (exactly matches height of left col) */}
-        <div className="col-md-6 d-flex">
+        {/* Middle big card */}
+        <div className="col-12 col-md-6 d-flex mb-3 mb-md-0">
           {bigCard && (
             <Card className="shadow-lg flex-fill h-100">
-              <Card.Img variant="top" src={bigCard.img} />
+              <Card.Img variant="top" src={bigCard.img} className="img-fluid" />
               <Card.Body>
                 <Card.Title>{bigCard.title}</Card.Title>
                 <Card.Text>
@@ -74,13 +74,13 @@ function Middle() {
           )}
         </div>
 
-        {/* Right column (2×2 cards, aligned with left column height) */}
-        <div className="col-md-3 d-flex flex-column">
+        {/* Right column */}
+        <div className="col-12 col-md-3 d-flex flex-column">
           <div className="row g-3 flex-fill">
             {rightCards.map((product) => (
               <div key={product.id} className="col-6 d-flex">
                 <Card className="shadow-sm flex-fill">
-                  <Card.Img variant="top" src={product.img} />
+                  <Card.Img variant="top" src={product.img} className="img-fluid" />
                   <Card.Body>
                     <Card.Title className="fs-6">{product.title}</Card.Title>
                     <Card.Text>
@@ -96,36 +96,25 @@ function Middle() {
         </div>
       </div>
 
-      {/* Trending Search Section */}
+      {/* Trending Search */}
       <div className="mt-5">
         <h4 className="fw-bold mb-3">Trending Search</h4>
         <div className="d-flex flex-wrap gap-2 mb-4">
           {trendingSearch.map((item, idx) => (
-            <span
-              key={idx}
-              className="px-3 py-2 rounded-pill bg-light text-secondary border"
-              style={{ fontSize: "0.9rem", cursor: "pointer" }}
-            >
+            <span key={idx} className="px-3 py-2 rounded-pill bg-light text-secondary border" style={{ fontSize: "0.9rem", cursor: "pointer" }}>
               {item}
             </span>
           ))}
         </div>
 
-        {/* Banner Section */}
-        <div
-          className="d-flex align-items-center justify-content-between p-4 rounded"
-          style={{
-  backgroundImage: `url("./images/banner.png")`,
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  color: "#fff",
-  height:"140px",
-  width:"1000x"
-}}
-        >
-        
-        
-        </div>
+        {/* Banner */}
+        <div className="d-flex align-items-center justify-content-center p-4 rounded" style={{
+          backgroundImage: `url("./images/banner.png")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          color: "#fff",
+          height: "140px",
+        }}></div>
       </div>
     </div>
   );
