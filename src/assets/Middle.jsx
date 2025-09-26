@@ -1,6 +1,9 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import mobile from '../assets/images/mobile.png'
+import banner from '../assets/images/banner.png'
+
 
 const products = [
   { id: 1, title: "Air Purifier", price: "$489.00", oldPrice: "$619.00", img: "./images/mobile.png" },
@@ -44,7 +47,7 @@ function Middle() {
         <div className="col-12 col-md-3 d-flex flex-column h-100">
           {leftCards.map((product, i) => (
             <Card key={product.id} className={`shadow-sm flex-fill ${i === 0 ? "mb-3" : ""}`}>
-              <Card.Img variant="top" src={product.img} className="img-fluid" />
+              <Card.Img variant="top" src={mobile} className="img-fluid" />
               <Card.Body>
                 <Card.Title className="fs-6">{product.title}</Card.Title>
                 <Card.Text>
@@ -61,7 +64,7 @@ function Middle() {
         <div className="col-12 col-md-6 d-flex mb-3 mb-md-0">
           {bigCard && (
             <Card className="shadow-lg flex-fill h-100">
-              <Card.Img variant="top" src={bigCard.img} className="img-fluid" />
+              <Card.Img variant="top" src={mobile} className="img-fluid" />
               <Card.Body>
                 <Card.Title>{bigCard.title}</Card.Title>
                 <Card.Text>
@@ -80,7 +83,7 @@ function Middle() {
             {rightCards.map((product) => (
               <div key={product.id} className="col-6 d-flex">
                 <Card className="shadow-sm flex-fill">
-                  <Card.Img variant="top" src={product.img} className="img-fluid" />
+                  <Card.Img variant="top" src={mobile} className="img-fluid" />
                   <Card.Body>
                     <Card.Title className="fs-6">{product.title}</Card.Title>
                     <Card.Text>
@@ -109,7 +112,7 @@ function Middle() {
 
         {/* Banner */}
         <div className="d-flex align-items-center justify-content-center p-4 rounded" style={{
-          backgroundImage: `url("./images/banner.png")`,
+          backgroundImage:`url(${banner})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           color: "#fff",

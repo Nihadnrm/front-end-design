@@ -1,5 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import america from "../assets/images/america.png";
+import stripe from "../assets/images/stripe.png";
+import stripe2 from "../assets/images/stripe2.png";
+import credit from "../assets/images/credit.png";
+import clarna from "../assets/images/clarna.png";
+import visa from "../assets/images/visa.png";
+
 
 function Footer() {
   return (
@@ -9,7 +16,7 @@ function Footer() {
           <Col xs={12} md={3} className="mb-4">
             <h6 className="fw-bold mb-3">Swoo - Online Electronic Market</h6>
             <p className="m-0 text-muted">HOTLINE 24/7</p>
-            <h6 className="mb-3 text-primary">(025) 3686 25 16</h6>
+            <h6 className="mb-3 " style={{color:"#4B3EC4"}}>(025) 3686 25 16</h6>
             <p className="small mb-1 text-muted">257 Thatcher Road St, Brooklyn, Manhattan, NY 10002</p>
             <p className="small mb-3 text-muted">contact@swooelectro.com</p>
             <div className="d-flex gap-3">
@@ -77,15 +84,15 @@ function Footer() {
           <Container className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
             <p className="mb-2 mb-md-0 small text-muted">© 2024 <strong>Swoonet3.</strong> All Rights Reserved</p>
             <div className="d-flex gap-3 align-items-center">
-              <img src="/images/stripe.png" alt="Stripe" style={{ height: "19px", width: "17px" }} />
-              <img src="/images/stripe2.png" alt="Paypal" style={{ height: "18px", width: "46px" }} />
-              <img src="/images/credit.png" alt="Mastercard" style={{ height: "19px", width: "35px" }} />
-              <img src="/images/clarna.png" alt="Klarna" style={{ height: "13px", width: "63px" }} />
-              <img src="/images/visa.png" alt="Visa" style={{ height: "17px", width: "46px" }} />
+              <img src={stripe} alt="Stripe" style={{ height: "19px", width: "17px" }} />
+              <img src={stripe2} alt="Paypal" style={{ height: "18px", width: "46px" }} />
+              <img src={credit} alt="Mastercard" style={{ height: "19px", width: "35px" }} />
+              <img src={clarna} alt="Klarna" style={{ height: "13px", width: "63px" }} />
+              <img src={visa} alt="Visa" style={{ height: "17px", width: "46px" }} />
             </div>
             <div className="d-flex gap-3 small">
               <span>USD ▾</span>
-              <span><img src="./images/america.png" alt="" />Eng ▾</span>
+              <span><img src={america} alt="" />Eng ▾</span>
             </div>
           </Container>
         </div>

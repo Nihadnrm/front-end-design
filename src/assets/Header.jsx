@@ -1,4 +1,7 @@
 import React from "react";
+import logo from "../assets/images/logo.png";
+import america from "../assets/images/america.png";
+
 import {
   Navbar,
   Nav,
@@ -19,7 +22,7 @@ function Header() {
           {/* Logo */}
           <Navbar.Brand href="/" className="d-flex align-items-center">
             <div>
-              <img src="./images/logo.png" alt="" style={{height:"40px",width:"150px"}}/>
+              <img src={logo} alt="" style={{height:"40px",width:"150px"}}/>
             </div>
            
           </Navbar.Brand>
@@ -46,8 +49,8 @@ function Header() {
               />
 
               {/* Small Search Button */}
-              <Button variant="primary" size="sm" className="rounded-end">
-                <i className="fa fa-search"></i>
+              <Button variant="" style={{backgroundColor:"#4B3EC4",color:"white"}} size="sm" className="rounded-end">
+                <i className="fa fa-search light"></i>
               </Button>
             </InputGroup>
           </Form>
@@ -57,7 +60,7 @@ function Header() {
             <div>
               <div className="small">Hotline 24/7</div>
               <div
-                className="fw-bold text-primary"
+                className="fw-bold "
                 style={{ color: "#4B3EC4" }}
               >
                 (025) 3686 25 16
@@ -135,7 +138,7 @@ function Header() {
             <NavDropdown
               title={
                 <span>
-                  <img src="./images/america.png" alt="" /> Eng
+                  <img src={america} alt="" /> Eng
                 </span>
               }
               id="nav-eng"
